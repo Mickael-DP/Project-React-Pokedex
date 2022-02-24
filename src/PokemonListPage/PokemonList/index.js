@@ -15,10 +15,11 @@ function PokemonCard({ id, name, image, types }) {
   )
 }
 
-function PokemonList() {
+function PokemonList({name}) {
   const poke = pokemons.map((pokemon) => {
     return (
       <PokemonCard
+          value={name}
         id={pokemon.id}
         name={pokemon.names.fr}
         image={pokemon.image}

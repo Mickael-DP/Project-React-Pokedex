@@ -1,17 +1,16 @@
 import './style.css'
 
-function SearchBar() {
+function SearchBar({name, onChange}) {
     return (
      <div className="searchbar">
          <input
              type="text"
-             id="header-search"
+             className="header-search"
              placeholder="Enter pokemon name"
-             name="s"
+             value={name}
+             onChange={onChange}
          />
      </div>
-
-
     )
 }
 
