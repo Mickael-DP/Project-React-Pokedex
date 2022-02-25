@@ -7,12 +7,12 @@ function PokemonListPage() {
     const [value, setValue] = React.useState('')
 
     function onChange(e) {
-        setValue(e.target.value)
+        setValue(e.target.value.toLowerCase())
     }
   return (
     <div>
       <SearchBar name={value} onChange={onChange}></SearchBar>
-      <PokemonList name={value}></PokemonList>
+      <PokemonList namePoke={value}></PokemonList>
     </div>
   )
 }

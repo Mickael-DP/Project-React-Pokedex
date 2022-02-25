@@ -8,7 +8,7 @@ function SearchBar({name, onChange}) {
              className="header-search"
              placeholder="Enter pokemon name"
              value={name}
-             onChange={onChange}
+             onChange= {onChange}
          />
      </div>
     )

@@ -4,22 +4,33 @@ import pokemons from './pokemons.json'
 console.log(pokemons)
 
 function PokemonCard({ id, name, image, types }) {
-    id = ("00" + id).slice (-3)
+  id = ('00' + id).slice(-3)
   return (
     <div className="card">
-      <p> No.{id}</p>
-      <h1> {name} </h1>
+      <p className="num-id"> No.{id}</p>
+      <h3 className="pokename"> {name} </h3>
       <img src={image} alt="photo_pokemon" />
-      <span> {types}</span>
+      <div className="chip">
+        {types.map((type) => {
+          return (
+            <span key={type} className={'types-' + type}>
+              {' '}
+              {type}
+            </span>
+          )
+        })}
+      </div>
     </div>
   )
 }
 
-function PokemonList({name}) {
-  const poke = pokemons.map((pokemon) => {
+function PokemonList({ namePoke }) {
+  const filtersPokemon = pokemons.filter((pokemon) => {
+    return pokemon.names.fr.toLowerCase().includes(namePoke)
+  })
+  const poke = filtersPokemon.map((pokemon) => {
     return (
       <PokemonCard
-          value={name}
         id={pokemon.id}
         name={pokemon.names.fr}
         image={pokemon.image}
