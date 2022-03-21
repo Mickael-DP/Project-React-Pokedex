@@ -9,8 +9,6 @@ function LanguageSelection() {
             </select>
         </div>
 
-
-
     )
 }
 

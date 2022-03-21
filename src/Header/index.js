@@ -1,6 +1,7 @@
 import './style.css'
 import logoSrc from './logo.svg'
-import LanguageSelection from "../LanguageSelection";
+import LanguageSelection from "./LanguageSelection";
+
 
 function Header() {
   return (
