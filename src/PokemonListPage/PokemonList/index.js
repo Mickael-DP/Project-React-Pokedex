@@ -1,6 +1,7 @@
-import './style.css'
+
 import pokemons from './pokemons.json'
 import PokemonCard from "../PokemonCard";
+import {Box} from "@mui/material";
 
 
 function PokemonList({ namePoke }) {
@@ -17,7 +18,7 @@ function PokemonList({ namePoke }) {
       />
     )
   })
-  return <div className="tab-poke">{poke}</div>
+  return <Box sx={{ display:'flex', justifyContent:'space-around', flexWrap:'wrap'}}>{poke}</Box>
 }
 
 export default PokemonList

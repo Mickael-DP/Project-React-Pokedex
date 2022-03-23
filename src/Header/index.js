@@ -1,14 +1,15 @@
-import './style.css'
+
 import logoSrc from './logo.svg'
 import LanguageSelection from "./LanguageSelection";
+import {Box, Typography} from "@mui/material";
 
 
 function Header() {
   return (
-    <header className="header">
-      <img src={logoSrc} alt="logo" height={60} />
+    <Box sx={{display: 'flex', justifyContent:'space-between', alignItems:'center'}}>
+      <Typography component="img" src={logoSrc} alt="logo" height={60} />
         <LanguageSelection />
-    </header>
+    </Box>
   )
 }
 

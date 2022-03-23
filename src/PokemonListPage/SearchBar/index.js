@@ -1,17 +1,15 @@
-import './style.css'
+import { TextField } from '@mui/material'
 
-function SearchBar({name, onChange}) {
-    return (
-     <div className="searchbar">
-         <input
-             type="text"
-             className="header-search"
-             placeholder="Enter pokemon name"
-             value={name}
-             onChange= {onChange}
-         />
-     </div>
-    )
+
+function SearchBar({ name, onChange }) {
+  return <TextField fullWidth
+      placeholder="Enter pokemon name"
+      value={name}
+      onChange={onChange}
+      sx={{backgroundColor:'white'}}>
+
+  </TextField>
+
 }
 
 export default SearchBar

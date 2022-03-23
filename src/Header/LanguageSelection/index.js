@@ -1,15 +1,16 @@
-import './style.css'
+import { FormControl, MenuItem, Select, Typography } from '@mui/material'
 
 function LanguageSelection() {
-    return (
-        <div>
-            <select id="lg-select">
-                <option value="fr">fr</option>
-                <option value="en">en</option>
-            </select>
-        </div>
-
-    )
+  return (
+    <Typography component="div" >
+      <FormControl sx={{bgcolor: 'white'}}>
+        <Select>
+          <MenuItem value="fr">fr </MenuItem>
+          <MenuItem value="en">en</MenuItem>
+        </Select>
+      </FormControl>
+    </Typography>
+  )
 }
 
 export default LanguageSelection

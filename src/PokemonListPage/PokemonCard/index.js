@@ -1,24 +1,29 @@
 import './style.css'
+import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 
 
 function PokemonCard({ id, name, image, types }) {
     id = ('00' + id).slice(-3)
     return (
-        <div className="card">
-            <p className="num-id"> No.{id}</p>
-            <h3 className="pokename"> {name} </h3>
-            <img src={image} alt="photo_pokemon" />
-            <div className="chip">
-                {types.map((type) => {
-                    return (
-                        <span key={type} className={'types-' + type}>
+        <Card sx={{ width: 200, height:'auto',  margin:1, color:'black', padding:1}}>
+           <Typography component="h6" sx={{textAlign:'start'}}> No.{id}</Typography>
+            <Typography component="h6" sx={{textAlign:'center'}} > {name} </Typography>
+            <CardMedia sx={{textAlign:'center'}}>
+                <img src={image} alt="photo_pokemon" />
+            </CardMedia>
+            <CardContent>
+                <Typography component="div" sx={{display:'flex', justifyContent:'center'}}>
+                    {types.map((type) => {
+                        return (
+                            <Box key={type} className={'types-' + type}>
               {' '}
-                            {type}
-            </span>
-                    )
-                })}
-            </div>
-        </div>
+                                {type}
+            </Box>
+                        )
+                    })}
+                </Typography>
+            </CardContent>
+        </Card>
     )
 }
 
