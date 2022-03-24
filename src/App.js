@@ -1,15 +1,18 @@
-import './App.css'
-import Header from './Header'
-import PokemonListPage from './PokemonListPage'
-import {Typography} from "@mui/material";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css';
+import Home from './home/Home';
 
 function App() {
-  return (
-    <Typography component="div" sx={{backgroundColor:"black"}}className="App">
-      <Header />
-      <PokemonListPage />
-    </Typography>
-  )
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
-export default App
+export default App;

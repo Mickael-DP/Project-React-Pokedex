@@ -1,9 +1,9 @@
-import './style.css'
+
 import React from 'react'
 import SearchBar from './SearchBar'
 import PokemonList from './PokemonList'
 
-function PokemonListPage() {
+function PokemonListPage({t}) {
     const [value, setValue] = React.useState('')
 
     function onChange(e) {
@@ -12,7 +12,7 @@ function PokemonListPage() {
   return (
     <div>
       <SearchBar name={value} onChange={onChange}></SearchBar>
-      <PokemonList namePoke={value}></PokemonList>
+      <PokemonList namePoke={value} t={t}></PokemonList>
     </div>
   )
 }
