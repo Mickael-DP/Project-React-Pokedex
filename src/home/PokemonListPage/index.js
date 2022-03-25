@@ -11,8 +11,8 @@ function PokemonListPage({t}) {
     }
   return (
     <div>
-      <SearchBar name={value} onChange={onChange}></SearchBar>
-      <PokemonList namePoke={value} t={t}></PokemonList>
+      <SearchBar name={value} onChange={onChange}  sx={{margin:'2 '}}/>
+      <PokemonList namePoke={value} t={t}/>
     </div>
   )
 }

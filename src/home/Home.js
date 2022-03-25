@@ -8,7 +8,7 @@ function Home() {
     const t = lang
 
   return (
-    <Typography component="div" sx={{backgroundColor:"black"}} className="App">
+    <Typography component="div" sx={{backgroundColor:"#282c34"}} className="App">
       <Header lang={lang} setLang={setLang} />
       <PokemonListPage t={t}/>
     </Typography>
