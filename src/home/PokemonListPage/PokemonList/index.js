@@ -1,8 +1,7 @@
-
 import pokemons from './pokemons.json'
-import PokemonCard from "../PokemonCard";
-import {Box} from "@mui/material";
-
+import typesTrad from './types.json'
+import PokemonCard from '../PokemonCard'
+import { Box } from '@mui/material'
 
 function PokemonList({ namePoke, t }) {
   const filtersPokemon = pokemons.filter((pokemon) => {
@@ -11,16 +10,19 @@ function PokemonList({ namePoke, t }) {
   const poke = filtersPokemon.map((pokemon) => {
     return (
       <PokemonCard
-          key ={pokemon.id}
+        key={pokemon.id}
         id={pokemon.id}
         name={pokemon.names}
         image={pokemon.image}
         types={pokemon.types}
-        t= {t}
+        t={t}
+        typeTrad={typesTrad}
       />
     )
   })
-  return <Box sx={{ display:'flex', justifyContent:'space-around', flexWrap:'wrap'}}>{poke}</Box>
+  return (
+    <Box sx={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>{poke}</Box>
+  )
 }
 
 export default PokemonList

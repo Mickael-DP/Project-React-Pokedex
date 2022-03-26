@@ -4,7 +4,7 @@ import {Typography} from "@mui/material";
 import {useState} from "react";
 
 function Home() {
-    const [lang,setLang] = useState();
+    const [lang,setLang] = useState('fr');
     const t = lang
 
   return (

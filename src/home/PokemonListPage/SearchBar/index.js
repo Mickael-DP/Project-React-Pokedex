@@ -1,11 +1,11 @@
-import { styled, TextField } from '@mui/material'
+import {styled, TextField} from '@mui/material'
 
 const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
     color: '#ff7f50',
   },
   '& label': {
-    color: 'rgba(255, 255, 255, 0.23)',
+    color: 'white',
   },
   '& .MuiOutlinedInput-root': {
     color:'white',
@@ -24,13 +24,15 @@ const CssTextField = styled(TextField)({
 
 function SearchBar({ name, onChange }) {
   return (
-    <CssTextField
-      fullWidth
-      variant="outlined"
-      label="Enter pokemon name"
-      value={name}
-      onChange={onChange}
-    />
+        <CssTextField
+            fullWidth
+            variant="outlined"
+            label="Enter pokemon name"
+            value={name}
+            onChange={onChange}
+        />
+
+
   )
 }
 

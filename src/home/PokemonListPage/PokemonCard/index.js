@@ -1,11 +1,11 @@
 import './style.css'
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
 
-function PokemonCard({ id, name, image, types, t }) {
+function PokemonCard({ id, name, image, types, t, typeTrad }) {
   id = ('00' + id).slice(-3)
 
   return (
-    <Card sx={{ width: 200, height: 'auto', margin: 1, color: 'black', padding: 1 }}>
+    <Card sx={{ width: 220, height: 200,my:'10px',mx:'7px', color: 'black', padding: '5px' }}>
       <Typography component="h6" sx={{ textAlign: 'start' }}>
         {' '}
         No.{id}
@@ -23,7 +23,7 @@ function PokemonCard({ id, name, image, types, t }) {
             return (
               <Box key={type} className={'types-' + type}>
                 {' '}
-                {type}
+                {typeTrad[type][t]}
               </Box>
             )
           })}
