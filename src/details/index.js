@@ -3,19 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useNavigate, useParams } from "react-router";
 import Modal from '@mui/material/Modal';
-
-const style = {
-    position:  'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width:500,
-    maxHeight: '90%',
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
+import {Card} from "@mui/material";
 
 export default function Details( {pokemons , typesTrad ,t}) {
 
@@ -55,7 +43,7 @@ export default function Details( {pokemons , typesTrad ,t}) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style} >
+                <Card sx={{m: 'auto', width:'350px', height:'400px'}}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
                         N°{pokemon.id} {pokemon.names[lang]}
                     </Typography>
@@ -69,7 +57,7 @@ export default function Details( {pokemons , typesTrad ,t}) {
                     <Typography id="modal-modal-description" sx={{ mt: 2, display:"flex", flexWrap:"wrap", gap:"5px"}}>
                         {pokemon.moves.map((move)=>{return <Typography key={move} id="modal-modal-description" fontFamily={['monospace']} sx={{ mt: 2 }}>{move}</Typography>})}
                     </Typography>
-                </Box>
+                </Card>
             </Modal>
         </div>
     );
