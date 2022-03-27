@@ -40,10 +40,14 @@ function LanguageSelection({ lang, setLang }) {
     <Typography component="div">
       <CssFormcontrol>
         <Select value={lang} onChange={onChange} onBlur={onChange}>
-          <MenuItem value="fr">Language</MenuItem>
           <MenuItem value="fr">fr</MenuItem>
           <MenuItem value="en">en</MenuItem>
-          <MenuItem value="ja">jp</MenuItem>
+          <MenuItem value="es">es</MenuItem>
+          <MenuItem value="it">it</MenuItem>
+          <MenuItem value="de">de</MenuItem>
+          <MenuItem value="ja">ja</MenuItem>
+          <MenuItem value="ko">ko</MenuItem>
+
         </Select>
       </CssFormcontrol>
     </Typography>
