@@ -4,6 +4,7 @@ import SearchBar from './SearchBar'
 import PokemonList from './PokemonList'
 import {Typography} from "@mui/material";
 
+
 function PokemonListPage({t}) {
     const [value, setValue] = React.useState('')
 

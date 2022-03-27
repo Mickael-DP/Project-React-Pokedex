@@ -5,7 +5,7 @@ function PokemonCard({ id, name, image, types, t, typeTrad }) {
   id = ('00' + id).slice(-3)
 
   return (
-    <Card sx={{ width: 220, height: 200,my:'10px',mx:'7px', color: 'black', padding: '5px' }}>
+    <Card sx={{ width: 220, height: 200, my: '10px', mx: '7px', color: 'black', padding: '5px' }}>
       <Typography component="h6" sx={{ textAlign: 'start' }}>
         {' '}
         No.{id}

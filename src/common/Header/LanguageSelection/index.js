@@ -37,7 +37,7 @@ function LanguageSelection({ lang, setLang }) {
   }
 
   return (
-    <Typography component="div" >
+    <Typography component="div">
       <CssFormcontrol>
         <Select value={lang} onChange={onChange} onBlur={onChange}>
           <MenuItem value="fr">Language</MenuItem>
