@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useNavigate, useParams } from "react-router";
 import Modal from '@mui/material/Modal';
@@ -13,7 +12,6 @@ export default function Details( {pokemons , typesTrad ,t}) {
     const pokemon = pokemons[id-1];
     const lang = t;
 
-    const typeData = pokemon.types.map((type)=>{return type});
     const pokemonWeight = hectoToKg(pokemon.weight)
     const pokemonHeight = decimetreToMetre(pokemon.height)
 
